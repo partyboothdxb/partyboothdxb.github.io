@@ -244,6 +244,17 @@
     .prop-badge{bottom:7px;left:7px;font-size:.56rem;padding:4px 8px}
   }
 
+  /* Booking calendar (Cal.com inline embed) */
+  #calendar{border-top:1px solid rgba(20,20,20,.07)}
+  .cal-card{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:8px;width:100%;margin:0 auto;overflow:hidden}
+  #cal-inline{width:100%;min-height:650px;overflow:auto;-webkit-overflow-scrolling:touch;border-radius:14px}
+  .cal-fallback{text-align:center;margin-top:24px;color:var(--muted);font-size:.92rem;display:grid;gap:6px}
+  .cal-fallback a{color:var(--gold-dark);font-weight:600;text-underline-offset:3px}
+  .book-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;position:relative}
+  .book .btn-ghost{font-size:1rem;padding:16.5px 34px}
+  @media (min-width:1060px) and (max-width:1110px){.cal-card{max-width:1000px}} /* keeps the embed out of its 1040px-wide layout when it would not fit */
+  @media (max-width:760px){.cal-card{padding:4px;border-radius:18px}#cal-inline{min-height:600px;max-height:780px;overscroll-behavior:contain}}
+
   /* Area */
   .area{background:var(--ink);color:#fff;border-radius:28px;padding:58px;display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;overflow:hidden;position:relative}
   .area::before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;right:-110px;top:-140px;background:radial-gradient(circle,rgba(184,149,106,.35),transparent 70%)}
@@ -354,6 +365,7 @@
     <ul class="nav-links">
       <li><a href="#how">How it works</a></li>
       <li><a href="#packages">Packages</a></li>
+      <li><a href="#calendar">Book</a></li>
       <li><a href="#shop">Shop</a></li>
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#faq">FAQ</a></li>
@@ -373,7 +385,7 @@
         <p class="lead">A fun, friendly photobooth that comes to your home, villa garden or party venue, with unlimited instant prints, playful props and a custom print with the birthday star's name.</p>
         <div class="hero-ctas">
           <a class="btn btn-wa js-wa" href="https://wa.me/971564789342" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
-          <a class="btn btn-ghost" href="#packages">See packages</a>
+          <a class="btn btn-ghost" href="#calendar">Pick a date</a>
         </div>
         <ul class="hero-points">
           <li>Unlimited instant prints</li>
@@ -488,6 +500,24 @@
         </article>
       </div>
       <p class="fine">Planning a surprise party? Just tell us. We'll keep it quiet!</p>
+    </div>
+  </section>
+
+  <!-- BOOKING CALENDAR (Cal.com inline embed; change the link in CAL_LINK below) -->
+  <section id="calendar">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Book online</span>
+        <h2>Pick your date</h2>
+        <p>Choose an open date and time below. Your slot is reserved instantly and we'll confirm the details on WhatsApp.</p>
+      </div>
+      <div class="cal-card">
+        <div id="cal-inline"></div>
+      </div>
+      <div class="cal-fallback">
+        <p>Calendar not loading? <a href="https://cal.com/gracee-gee-wkcwek/party-booth-booking" target="_blank" rel="noopener">Open the booking page</a></p>
+        <p>Prefer to chat? <a class="js-wa" href="https://wa.me/971564789342" target="_blank" rel="noopener">Book on WhatsApp</a></p>
+      </div>
     </div>
   </section>
 
@@ -632,7 +662,10 @@
         <span class="kicker">Let's celebrate</span>
         <h2>Got a birthday coming up?</h2>
         <p>Send us your date and area on WhatsApp and we'll check availability right away.</p>
-        <a class="btn btn-wa js-wa" href="https://wa.me/971564789342" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
+        <div class="book-ctas">
+          <a class="btn btn-wa js-wa" href="https://wa.me/971564789342" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
+          <a class="btn btn-ghost" href="#calendar">Pick a date</a>
+        </div>
         <div class="socials">
           <a class="social js-fb" href="https://www.facebook.com/PartyBoothPhotographyServices/" target="_blank" rel="noopener"><svg><use href="#i-fb"/></svg>Facebook</a>
           <a class="social js-ig" href="https://instagram.com/your-handle" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg>Instagram</a>
@@ -704,6 +737,19 @@
     if (c.email) document.querySelectorAll(".js-email").forEach(function(a){ a.href = "mailto:" + c.email; a.querySelector("span").textContent = c.email; a.style.display = ""; });
     var y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
   })();
+</script>
+<!-- Cal.com inline booking calendar (official embed snippet) -->
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  var CAL_LINK = "gracee-gee-wkcwek/party-booth-booking";
+  Cal("init", { origin: "https://cal.com" });
+  Cal("inline", {
+    elementOrSelector: "#cal-inline",
+    calLink: CAL_LINK,
+    layout: "month_view",
+    config: { layout: "month_view", theme: "light" }
+  });
+  Cal("ui", { theme: "light", cssVarsPerTheme: { light: { "cal-brand": "#111111" } }, hideEventTypeDetails: false, layout: "month_view" });
 </script>
 </body>
 </html>
