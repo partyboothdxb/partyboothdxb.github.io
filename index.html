@@ -178,6 +178,10 @@
   .ph span{background:rgba(255,255,255,.85);color:var(--ink);font-family:var(--sans);font-weight:700;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:999px;position:relative;z-index:1}
   .ph.big{grid-column:span 2;grid-row:span 2}
   .ph.wide{grid-column:span 2}
+  .gi{margin:0;border-radius:14px;overflow:hidden;background:#efe6d8}
+  .gi img{width:100%;height:100%;object-fit:cover;display:block}
+  .gi.big{grid-column:span 2;grid-row:span 2}
+  .gi.wide{grid-column:span 2}
   .gallery-note{text-align:center;color:var(--muted);font-size:.92rem;margin-top:22px}
 
   /* Area */
@@ -458,7 +462,7 @@
     </div>
   </section>
 
-  <!-- GALLERY (placeholders) -->
+  <!-- GALLERY -->
   <section id="gallery">
     <div class="wrap">
       <div class="section-head">
@@ -466,17 +470,16 @@
         <h2>Party moments</h2>
         <p>A peek at our prints, props and setups.</p>
       </div>
-      <!-- ✏️ Replace each .ph block with: <img src="your-photo.jpg" alt="..." style="width:100%;height:100%;object-fit:cover;border-radius:14px"> -->
       <div class="gallery-grid">
-        <div class="ph big f1"><span>Your photos here</span></div>
-        <div class="ph f2"><span>Your photos here</span></div>
-        <div class="ph f3"><span>Your photos here</span></div>
-        <div class="ph wide f6"><span>Your photos here</span></div>
-        <div class="ph f5"><span>Your photos here</span></div>
-        <div class="ph f4"><span>Your photos here</span></div>
-        <div class="ph wide f2"><span>Your photos here</span></div>
+        <figure class="gi big"><img src="gallery/g1.jpg" alt="Elegant photobooth with a gold sequin backdrop and cream and gold balloon garland at a home birthday party" loading="lazy" decoding="async"></figure>
+        <figure class="gi"><img src="gallery/g2.jpg" alt="Kids in party hats laughing with fun photobooth props" loading="lazy" decoding="async"></figure>
+        <figure class="gi"><img src="gallery/g3.jpg" alt="Hand holding a printed photo strip at a birthday party" loading="lazy" decoding="async"></figure>
+        <figure class="gi wide"><img src="gallery/g4.jpg" alt="Photobooth prop table with glasses, crowns, masks and balloons" loading="lazy" decoding="async"></figure>
+        <figure class="gi"><img src="gallery/g5.jpg" alt="Adults celebrating a milestone birthday at an evening party with a booth backdrop and fairy lights" loading="lazy" decoding="async"></figure>
+        <figure class="gi"><img src="gallery/g6.jpg" alt="Close-up of custom birthday photo prints on a gold tray" loading="lazy" decoding="async"></figure>
+        <figure class="gi wide"><img src="gallery/g7.jpg" alt="Villa garden party in Dubai with a photobooth and a cream and gold balloon arch" loading="lazy" decoding="async"></figure>
       </div>
-      <p class="gallery-note">Follow us on <a class="js-fb" href="https://www.facebook.com/PartyBoothPhotographyServices/" target="_blank" rel="noopener">Facebook</a> for photos from our latest parties.</p>
+      <p class="gallery-note">See more on our <a class="js-fb" href="https://www.facebook.com/PartyBoothPhotographyServices/" target="_blank" rel="noopener">Facebook</a> page.</p>
     </div>
   </section>
 
