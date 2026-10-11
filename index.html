@@ -13,7 +13,7 @@
     // ⚠️ PLACEHOLDER: WhatsApp number in international format, digits only
     // (no +, spaces or leading 0), e.g. 971501234567 for +971 50 123 4567
     whatsappNumber: "971564789342",
-    whatsappMessage: "Hi! I'd like to book the photobooth for a birthday on ...",
+    whatsappMessage: "Hi! I'd like to book the photobooth for an event on ...",
     instagramUrl: "",   // ⚠️ PLACEHOLDER (set to "" to hide)
     facebookUrl: "https://www.facebook.com/PartyBoothPhotographyServices/",
     email: "" // optional, e.g. "hello@example.com" (leave "" to hide)
@@ -46,8 +46,8 @@
 <!-- ===================================================================== -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Party Booth · Birthday Photobooth Hire in Dubai</title>
-<meta name="description" content="Birthday photobooth hire anywhere in Dubai. Unlimited instant prints, fun props and custom prints with the birthday star's name. Packages from 499 AED. Book on WhatsApp.">
+<title>Party Booth · Photobooth Hire in Dubai for Every Celebration</title>
+<meta name="description" content="Photobooth hire anywhere in Dubai for birthdays, weddings, baby showers, corporate events, graduations, festive parties and more. Unlimited instant prints, fun props and custom prints. Packages from 499 AED. Book on WhatsApp.">
 <meta name="theme-color" content="#ece9e5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -152,6 +152,18 @@
   .step .num{font-family:var(--script);font-size:3.4rem;line-height:1;color:var(--gold-dark);margin-bottom:10px}
   .step h3{font-size:1.05rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
   .step p{color:var(--muted)}
+  .evs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .ev{background:var(--card);border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow);position:relative;display:flex;flex-direction:column;gap:10px;border-top:3px solid var(--gold-dark)}
+  .ev-main{grid-column:span 2;background:#111;color:#ECE9E5}
+  .ev-main p{color:#d8d2c8!important}
+  .ev-main h3{color:#ECE9E5}
+  .ev-main .btn{background:var(--gold);color:#fff}
+  .ev h3{font-size:1rem;text-transform:uppercase;letter-spacing:.06em}
+  .ev p{color:var(--muted);flex:1}
+  .ev .btn{align-self:flex-start;font-size:.78rem;padding:10px 16px}
+  .ev .badge{position:absolute;top:-12px;right:18px;left:auto;transform:none}
+  @media (max-width:1000px){.evs{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.evs{grid-template-columns:1fr}.ev-main{grid-column:auto}}
 
   /* Packages */
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
@@ -364,6 +376,7 @@
     <a href="#top" class="logo"><img src="logo-transparent.png" alt="Party Booth Photography Services" data-biz-alt></a>
     <ul class="nav-links">
       <li><a href="#how">How it works</a></li>
+      <li><a href="#events">Events</a></li>
       <li><a href="#packages">Packages</a></li>
       <li><a href="#calendar">Book</a></li>
       <li><a href="#shop">Shop</a></li>
@@ -380,9 +393,9 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="rule">Birthday Photobooth · Dubai</div>
-        <h1>Make their birthday <span class="script">unforgettable</span></h1>
-        <p class="lead">A fun, friendly photobooth that comes to your home, villa garden or party venue, with unlimited instant prints, playful props and a custom print with the birthday star's name.</p>
+        <div class="rule">Photobooth Hire · Dubai</div>
+        <h1>Make every celebration <span class="script">unforgettable</span></h1>
+        <p class="lead">A fun, friendly photobooth that comes to your home, villa garden or event venue, with unlimited instant prints, playful props and custom prints for birthdays, weddings, baby showers, corporate events and more.</p>
         <div class="hero-ctas">
           <a class="btn btn-wa js-wa" href="https://wa.me/971564789342" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
           <a class="btn btn-ghost" href="#calendar">Pick a date</a>
@@ -423,12 +436,12 @@
         <div class="step">
           <div class="num">01</div>
           <h3>Message us on WhatsApp</h3>
-          <p>Tell us the date, the area and whose birthday it is. We'll confirm availability quickly.</p>
+          <p>Tell us the date, the area and what you're celebrating. We'll confirm availability quickly.</p>
         </div>
         <div class="step">
           <div class="num">02</div>
           <h3>Pick your package &amp; theme</h3>
-          <p>Choose a package, share the party theme and we'll design a print with the birthday star's name and age.</p>
+          <p>Choose a package, share the party theme and we'll design a custom print for your celebration.</p>
         </div>
         <div class="step">
           <div class="num">03</div>
@@ -439,54 +452,109 @@
     </div>
   </section>
 
+  <!-- EVENTS -->
+  <section id="events">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Events we cover</span>
+        <h2>A photobooth for every celebration</h2>
+        <p>Birthdays are our favourite, but we bring the fun to all kinds of events across Dubai.</p>
+      </div>
+      <div class="evs">
+        <article class="ev ev-main">
+          <span class="badge">Most booked</span>
+          <h3>Birthdays</h3>
+          <p>Kids' parties, sweet sixteens and milestone birthdays with custom name &amp; age prints.</p>
+          <a class="btn btn-wa js-wa" data-event="birthday party" href="https://wa.me/971564789342" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Enquire on WhatsApp</a>
+        </article>
+        <article class="ev">
+          
+          <h3>Weddings &amp; Engagements</h3>
+          <p>Elegant backdrops and monogram prints your guests will keep forever.</p>
+          <a class="btn btn-wa js-wa" data-event="wedding / engagement" href="https://wa.me/971564789342" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Enquire on WhatsApp</a>
+        </article>
+        <article class="ev">
+          
+          <h3>Baby Showers &amp; Gender Reveals</h3>
+          <p>Sweet, themed prints to remember the big reveal and the bump.</p>
+          <a class="btn btn-wa js-wa" data-event="baby shower / gender reveal" href="https://wa.me/971564789342" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Enquire on WhatsApp</a>
+        </article>
+        <article class="ev">
+          
+          <h3>Corporate Events &amp; Brand Launches</h3>
+          <p>Branded prints with your logo for launches, team nights and activations.</p>
+          <a class="btn btn-wa js-wa" data-event="corporate event / brand launch" href="https://wa.me/971564789342" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Enquire on WhatsApp</a>
+        </article>
+        <article class="ev">
+          
+          <h3>Graduations</h3>
+          <p>Caps in the air: celebrate the class with prints they'll treasure.</p>
+          <a class="btn btn-wa js-wa" data-event="graduation party" href="https://wa.me/971564789342" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Enquire on WhatsApp</a>
+        </article>
+        <article class="ev">
+          
+          <h3>Eid, Diwali, Christmas &amp; Festive Parties</h3>
+          <p>Festive themes and family photos for every season's celebrations.</p>
+          <a class="btn btn-wa js-wa" data-event="festive party (Eid / Diwali / Christmas)" href="https://wa.me/971564789342" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Enquire on WhatsApp</a>
+        </article>
+        <article class="ev">
+          
+          <h3>School &amp; Community Events</h3>
+          <p>Fun for fairs, family days and community gatherings of all sizes.</p>
+          <a class="btn btn-wa js-wa" data-event="school / community event" href="https://wa.me/971564789342" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Enquire on WhatsApp</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- PACKAGES -->
   <section id="packages">
     <div class="wrap">
       <div class="section-head">
         <span class="kicker">Packages</span>
-        <h2>Birthday packages</h2>
+        <h2>Packages</h2>
         <p>Simple, honest prices in AED. Every package includes a female attendant and unlimited prints.</p>
       </div>
       <div class="cards">
         <!-- Package 1 -->
         <article class="card">
           <div class="tag">Simple &amp; fun</div>
-          <h3>Birthday Basic</h3>
-          <p class="for">Everything you need for a fun party photobooth.</p>
+          <h3>Basic</h3>
+          <p class="for">Everything you need for a fun photobooth at any event.</p>
           <div class="price-line"><span class="amt">499</span><span class="cur">AED</span></div>
           <div class="dur">2 hours</div>
           <ul>
             <li>Female booth attendant</li>
             <li>Unlimited photos &amp; instant prints</li>
-            <li>“Happy Birthday” print template</li>
+            <li>Event print template (e.g. “Happy Birthday”)</li>
             <li>Fun party props</li>
             <li>Digital gallery link after the event</li>
           </ul>
-          <a class="btn btn-wa js-wa" data-pkg="Birthday Basic (499 AED)" href="https://wa.me/971564789342" target="_blank" rel="noopener">Book Basic</a>
+          <a class="btn btn-wa js-wa" data-pkg="Basic Package (499 AED)" href="https://wa.me/971564789342" target="_blank" rel="noopener">Book Basic</a>
         </article>
         <!-- Package 2 (featured) -->
         <article class="card featured">
           <span class="badge">Most popular for kids</span>
           <div class="tag">Fully themed</div>
-          <h3>Birthday Party Package</h3>
-          <p class="for">Themed to match your little one's party.</p>
+          <h3>Party Package</h3>
+          <p class="for">Themed to match your party, from kids' birthdays to baby showers.</p>
           <div class="price-line"><span class="amt">749</span><span class="cur">AED</span></div>
           <div class="dur">3 hours</div>
           <ul>
             <li>Female attendant &amp; unlimited prints</li>
-            <li>Custom print with your child's name, age &amp; party theme</li>
+            <li>Custom print with names, date &amp; party theme</li>
             <li>Themed props to match the party</li>
             <li>Simple backdrop in your party colours</li>
             <li>QR code for instant phone downloads</li>
             <li>Online gallery to keep</li>
           </ul>
-          <a class="btn btn-wa js-wa" data-pkg="Birthday Party Package (749 AED)" href="https://wa.me/971564789342" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Book Party Package</a>
+          <a class="btn btn-wa js-wa" data-pkg="Party Package (749 AED)" href="https://wa.me/971564789342" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Book Party Package</a>
         </article>
         <!-- Package 3 -->
         <article class="card">
           <div class="tag">The big ones</div>
           <h3>Milestone Package</h3>
-          <p class="for">For 18th, 21st, 30th, 40th and 50th birthdays.</p>
+          <p class="for">For milestone birthdays (18th, 21st, 30th, 40th, 50th) and anniversaries.</p>
           <div class="price-line"><span class="amt">999</span><span class="cur">AED</span></div>
           <div class="dur">3 hours</div>
           <ul>
@@ -535,7 +603,7 @@
             <div class="feat"><div class="ic"><svg><use href="#i-print"/></svg></div><div><b>Unlimited instant prints</b><span>Every guest takes a keepsake home</span></div></div>
             <div class="feat"><div class="ic"><svg><use href="#i-user"/></svg></div><div><b>A female attendant</b><span>She runs the booth so you can enjoy the party</span></div></div>
             <div class="feat"><div class="ic"><svg><use href="#i-mask"/></svg></div><div><b>Fun props</b><span>Hats, glasses, signs &amp; more</span></div></div>
-            <div class="feat"><div class="ic"><svg><use href="#i-pen"/></svg></div><div><b>Birthday print design</b><span>Custom name &amp; age on Party and Milestone packages</span></div></div>
+            <div class="feat"><div class="ic"><svg><use href="#i-pen"/></svg></div><div><b>Custom print design</b><span>Personalised prints on Party and Milestone packages</span></div></div>
             <div class="feat"><div class="ic"><svg><use href="#i-cloud"/></svg></div><div><b>Online gallery</b><span>All your photos to download &amp; share</span></div></div>
             <div class="feat"><div class="ic"><svg><use href="#i-van"/></svg></div><div><b>Delivery &amp; setup</b><span>We bring it, set it up and pack it away</span></div></div>
           </div>
@@ -641,11 +709,11 @@
         </details>
         <details>
           <summary>Can the print match our party theme?</summary>
-          <p>Absolutely. With the Party and Milestone packages we design a print with the birthday star's name, age and party theme, whether it's dinosaurs, princesses, superheroes or gold and black.</p>
+          <p>Absolutely. With the Party and Milestone packages we design a print with names, date and your theme, whether it's dinosaurs and princesses, a wedding monogram, your company logo or festive gold and black.</p>
         </details>
         <details>
           <summary>Which areas do you cover?</summary>
-          <p>We cover all of Dubai. For parties outside Dubai, a small travel fee may apply. Just message us your location.</p>
+          <p>We cover all of Dubai. For events outside Dubai, a small travel fee may apply. Just message us your location.</p>
         </details>
         <details>
           <summary>How do I book and secure my date?</summary>
@@ -660,7 +728,7 @@
     <div class="wrap">
       <div class="book">
         <span class="kicker">Let's celebrate</span>
-        <h2>Got a birthday coming up?</h2>
+        <h2>Got a celebration coming up?</h2>
         <p>Send us your date and area on WhatsApp and we'll check availability right away.</p>
         <div class="book-ctas">
           <a class="btn btn-wa js-wa" href="https://wa.me/971564789342" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
@@ -684,7 +752,7 @@
       <a class="js-ig" href="https://instagram.com/your-handle" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
       <a class="js-wa" href="https://wa.me/971564789342" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
     </div>
-    <p>Birthday photobooth hire in Dubai · © <span id="year">2026</span> <span data-biz>Party Booth</span> <span data-tagline>Photography Services</span></p>
+    <p>Photobooth hire in Dubai for every celebration · © <span id="year">2026</span> <span data-biz>Party Booth</span> <span data-tagline>Photography Services</span></p>
   </div>
 </footer>
 
@@ -724,11 +792,12 @@
     document.querySelectorAll("[data-biz]").forEach(function(el){ el.textContent = name; });
     document.querySelectorAll("[data-tagline]").forEach(function(el){ el.textContent = c.tagline || ""; });
     document.querySelectorAll("[data-biz-alt]").forEach(function(el){ el.alt = name + (c.tagline ? " " + c.tagline : ""); });
-    document.title = name + " · Birthday Photobooth Hire in Dubai";
+    document.title = name + " · Photobooth Hire in Dubai for Every Celebration";
     // strip spaces, +, dashes and brackets only (keeps the 971564789342 placeholder intact)
     var num = String(c.whatsappNumber || "971564789342").replace(/[\s+\-()]/g, "");
     document.querySelectorAll(".js-wa").forEach(function(a){
       var msg = c.whatsappMessage || "";
+      if (a.dataset.event) msg = "Hi! I'd like to book the photobooth for a " + a.dataset.event + " on ...";
       if (a.dataset.pkg) msg = msg.replace(/\s*\.\.\.\s*$/, "") + " ... I'm interested in the " + a.dataset.pkg + ".";
       a.href = "https://wa.me/" + num + (msg ? "?text=" + encodeURIComponent(msg) : "");
     });
